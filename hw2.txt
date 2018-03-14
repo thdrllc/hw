@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main()
+{
+setlocale(LC_ALL, "Rus");
+int N,M,i,j;
+char A[N][M];
+int alf[25]={0};
+char alfav[26]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+srand(time(NULL));
+printf("Введите кол-во строк: ");
+scanf("%d",&N);
+printf("Введите кол-во столбцов: ");
+scanf("%d",&M);
+printf("Размер массива: %dx%d \n", N,M);
+for (i = 0; i < N; i++ ) {
+for (j = 0; j < M; j++ ) {
+A[i][j] = 65+rand()%26;
+printf("%c",A[i][j]);
+switch(A[i][j]){
+case 'A': alf[0]++; break;
+case 'B': alf[1]++; break;
+case 'C': alf[2]++; break;
+case 'D': alf[3]++; break;
+case 'E': alf[4]++; break;
+case 'F': alf[5]++; break;
+case 'G': alf[6]++; break;
+case 'H': alf[7]++; break;
+case 'I': alf[8]++; break;
+case 'J': alf[9]++; break;
+case 'K': alf[10]++; break;
+case 'L': alf[11]++; break;
+case 'M': alf[12]++; break;
+case 'N': alf[13]++; break;
+case 'O': alf[14]++; break;
+case 'P': alf[15]++; break;
+case 'Q': alf[16]++; break;
+case 'R': alf[17]++; break;
+case 'S': alf[18]++; break;
+case 'T': alf[19]++; break;
+case 'U': alf[20]++; break;
+case 'V': alf[21]++; break;
+case 'W': alf[22]++; break;
+case 'X': alf[23]++; break;
+case 'Y': alf[24]++; break;
+case 'Z': alf[25]++; break;}}
+printf("\n");
+}
+for(i=0; i<26;i++){
+printf("%c %d\n",alfav[i],alf[i]);
+}}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main(){
+char slovo1[20],slovo2[20],vrem[20];
+int sch1,sch2,i,j,f;
+char povt1[20];
+printf("Введите первое слово: ");
+scanf("%s",slovo1);
+printf("Введите второе слово: ");
+scanf("%s",slovo2);
+    sch1=strlen(slovo1);
+    sch2=strlen(slovo2);
+	
+		 for (i=0; i<sch2; i++) {
+        f = 1;
+        for (j=0; j<sch2; j++)
+            if (slovo2[i] == slovo2[j] && i != j) {
+                f = 0;
+                break;
+            }
+        if (f == 1) 
+	 vrem[i]=slovo2[i];}
+  for (i=0; i<sch1; i++) {
+        f = 1;
+        for (j=0; j<sch1; j++)
+            if (slovo1[i] == slovo1[j] && i != j) {
+                f = 0;
+                break;
+            }
+        if (f == 1) 
+            for(j=0;j<sch2;j++)
+            if(vrem[j]==slovo1[i])
+                 printf("%c ", slovo1[i]);}}
+
+
+//Даны 2  слова. Вывести символы которые встречаются в обоих словах только 1 раз				 
